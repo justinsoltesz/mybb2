@@ -5201,7 +5201,7 @@ textarea {
   border-radius: 4px;
 }
 
-.search .search__button {
+.search__button {
   color: #999;
   float: right;
   margin: 8px 0 0 0;
@@ -5209,16 +5209,16 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
-  .search .search__button {
+  .search__button {
     display: none;
   }
 }
 
-.search .search__button:hover {
+.search__button:hover {
   color: #ccc;
 }
 
-.search .search__container {
+.search__container {
   clear: both;
   display: none;
   cursor: text;
@@ -5231,7 +5231,7 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
-  .search .search__container {
+  .search__container {
     float: right;
     display: block;
     width: 35%;
@@ -5240,7 +5240,7 @@ textarea {
   }
 }
 
-.search .search__container .search__label {
+.search__label {
   cursor: text;
 }
 
@@ -5253,7 +5253,7 @@ textarea {
   outline: 0;
 }
 
-.search .search__controls {
+.search__controls {
   width: 24%;
   text-align: right;
   float: right;
@@ -5261,8 +5261,7 @@ textarea {
   box-sizing: border-box;
 }
 
-.search .search__submit,
-.search .search__advanced {
+.search__submit, .search__advanced {
   height: 24px;
   margin: 0;
   padding: 0;
@@ -5273,8 +5272,7 @@ textarea {
   color: #999;
 }
 
-.search .search__submit:hover,
-.search .search__advanced:hover {
+.search__submit:hover, .search__advanced:hover {
   color: #666;
 }
 

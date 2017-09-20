@@ -1,6 +1,6 @@
 .search {
 
-    .search__button {
+    &__button {
         color: $alt-font-color-2;
         float: $right;
         margin: side-values(8px 0 0 0);
@@ -15,7 +15,7 @@
         }
     }
 
-    .search__container {
+    &__container {
         clear: both;
         display: none;
         cursor: text;
@@ -33,13 +33,13 @@
             clear: none;
             margin-top: 10px;
         }
-
-        .search__label {
-            cursor: text;
-        }
     }
 
-    .search__field {
+    &__label {
+        cursor: text;
+    }
+
+    .search__field {    // nesting required
         border: 0;
         padding: 0;
         margin: 0;
@@ -48,7 +48,7 @@
         outline: 0;
     }
 
-    .search__controls {
+    &__controls {
         width: 24%;
         text-align: $right;
         float: $right;
@@ -56,8 +56,8 @@
         box-sizing: border-box;
     }
 
-    .search__submit,
-    .search__advanced {
+    &__submit,
+    &__advanced {
         height: 24px;
         margin: 0;
         padding: 0;
