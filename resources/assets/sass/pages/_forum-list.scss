@@ -6,25 +6,25 @@
         border-bottom: 1px solid $border-2;
         line-height: 1.4;
 
-        .forum__title {
+        &__title {
             margin: side-values(0 0 4px 0);
             font-size: 1em;
         }
 
-        .forum__description {
+        &__description {
             font-size: 0.8em;
             margin: 0;
             padding: side-values(2px 0 4px 0);
             color: $alt-font-color-4;
         }
 
-        .forum__subforums {
+        &__subforums {
             list-style: none;
             margin: side-values(2px 0 4px 20px);
             padding: 0;
             font-size: 0.8em;
 
-            .forum__subforums__subforum {
+            &__subforum {
                 display: inline-block;
                 margin: side-values(0 12px 4px 0);
             }
@@ -38,7 +38,7 @@
             }
         }
 
-        .forum__topic {
+        &__topic {
             margin-top: 6px;
             padding: side-values(10px 0 0 48px);
             border-top: 1px dotted $border-1;
@@ -49,7 +49,7 @@
                 @include avatar(36);
             }
 
-            .forum__topic__title {
+            &__title {
                 display: block;
                 margin: 0;
                 padding: 0;
@@ -57,7 +57,7 @@
                 font-size: 0.9em;
             }
 
-            .forum__topic__post {
+            &__post {
                 display: block;
                 font-size: 0.8em;
                 color: $alt-font-color-2;
@@ -75,19 +75,19 @@
         }
     }
 
-    &.forum-list--full-width {
+    &--full-width {
 
         @include bp-medium {
-            
+
             .forum {
 
-                .forum__info {
+                &__info {
                     float: $left;
                     width: 60%;
                     margin-right: 2%;
                 }
 
-                .forum__topic {
+                &__topic {
                     float: $right;
                     width: 38%;
                     border: none;
@@ -100,18 +100,18 @@
         }
     }
 
-    &.forum-list--compact {
+    &--compact {
 
-        .forum-list--compact__category {
+        &__category {
             border-bottom: 1px solid $border-1;
             padding: 8px 12px;
 
-            .forum-list--compact__category__title {
+            &__title {
                 margin: 0;
                 font-size: 1em;
             }
 
-            .forum-list--compact__category__forums {
+            &__forums {
                 list-style: none;
                 margin: 0;
                 padding: side-values(0 0 0 15px);
@@ -126,7 +126,7 @@
 }
 
 .block--container {
-    
+
     .forum-list {
         padding: 0 6px;
 

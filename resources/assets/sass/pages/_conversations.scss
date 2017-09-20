@@ -15,11 +15,11 @@
             @include avatar(44);
         }
 
-        .conversation__title--unread {
+        &__title--unread {
             font-weight: bold;
         }
 
-        .conversation__latest {
+        &__latest {
             font-size: 0.8em;
             color: $alt-font-color-2;
             margin: 0;
@@ -30,7 +30,7 @@
             }
         }
 
-        .conversation__unread {
+        &__unread {
             background: $unread-count;
             color: $invert-font-color;
             padding: side-values(2px 5px 1px 4px);
@@ -53,7 +53,7 @@
     line-height: 1.4;
     @include clearfix();
 
-    .conversation-participants__title {
+    &__title {
         margin-bottom: 0;
     }
 
@@ -68,11 +68,11 @@
             @include avatar(36);
         }
 
-        .participant__username {
+        &__username {
             font-size: 0.9em;
         }
 
-        .participant__last-read {
+        &__last-read {
             display: block;
             font-size: 0.7em;
             color: $alt-font-color-1;

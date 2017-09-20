@@ -31,7 +31,7 @@
                             <div class="forum__topic forum__topic--latest">
                                 <a href="" class="avatar-profile-link" title="Go to {{ forum.lastPostAuthor.name }}'s profile"><img src="{{ forum.lastPostAuthor.avatar }}" class="avatar" /></a>
                                 <h4 class="forum__topic__title"><a href="{{ url_route("topics.show", {'slug': forum.lastPost.topic.slug, 'id': forum.lastPost.topic.id}) }}">{{ forum.lastPost.topic.title }}</a></h4>
-                                <p class="forum__topic__post">{{ post_date_link(url_route("topics.last", {'slug': forum.lastPost.topic.slug, 'id': forum.lastPost.topic.id}), forum.lastPost.created_at) }} {{ trans('general.by') }} {{ render_profile_link(forum.lastPostAuthor) }}</p>
+                                <p class="forum__topic__post">{{ post_date_link(url_route("topics.last", {'slug': forum.lastPost.topic.slug, 'id': forum.lastPost.topic.id}), forum.lastPost.created_at, 'forum__topic__post__date') }} {{ trans('general.by') }} {{ render_profile_link(forum.lastPostAuthor) }}</p>
                             </div>
                         {% endif %}
                     </div>

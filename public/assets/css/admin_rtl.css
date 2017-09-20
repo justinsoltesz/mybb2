@@ -3905,18 +3905,18 @@ img.jcrop-preview {
   border-radius: 4px 4px 0 0;
 }
 
-.form .form__section {
+.form__section {
   padding: 16px 12px;
   border-bottom: 2px solid #dfdfdf;
 }
 
-.form .form__section:after {
+.form__section:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.form .form__section .form__section__title {
+.form__section__title {
   margin: 0 0 12px 0;
   padding: 0 8px 8px 8px;
   color: #007fd0;
@@ -3925,7 +3925,7 @@ img.jcrop-preview {
 }
 
 @media only screen and (min-width: 768px) {
-  .form .form__section .form__section__title {
+  .form__section__title {
     border: 0;
     float: right;
     margin: 0;
@@ -3935,18 +3935,18 @@ img.jcrop-preview {
   }
 }
 
-.form .form__section:last-child {
+.form__section:last-child {
   border-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
-  .form .form__section {
+  .form__section {
     padding: 20px 12px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .form .form__section__container {
+  .form__section__container {
     float: right;
     margin: 0 3% 0 0;
     padding: 0 20px 0 0;
@@ -3956,68 +3956,68 @@ img.jcrop-preview {
   }
 }
 
-.form .form__row {
+.form__row {
   border-bottom: 1px solid #dfdfdf;
   padding: 12px 8px;
 }
 
-.form .form__row .form__row__title {
+.form__row__title {
   margin: 0 0 5px 0;
   padding: 0;
   font-size: 1em;
 }
 
-.form .form__row:first-child {
-  padding-top: 0;
-}
-
-.form .form__row:last-child {
-  border-bottom: 0;
-  padding-bottom: 6px;
-}
-
-.form .form__checkbox {
-  font-size: 0.9em;
-  margin: 5px 0;
-  padding: 0 30px 0 0;
-}
-
-.form .form__checkbox input[type="checkbox"] {
-  float: right;
-  margin: 6px -26px 0 0;
-}
-
-.form .form__checkbox:last-child {
-  margin-bottom: 0;
-}
-
-.form .form__row__description, .form .form__radio .form__radio__description {
+.form__row__description, .form__radio__description {
   font-size: 0.8em;
   line-height: 1.4;
   color: #666;
   margin: -4px 0 4px 0;
 }
 
-.form .form__radio {
-  padding: 0 30px 0 0;
-  margin-bottom: 20px;
+.form__row:first-child {
+  padding-top: 0;
 }
 
-.form .form__radio input[type="radio"] {
+.form__row:last-child {
+  border-bottom: 0;
+  padding-bottom: 6px;
+}
+
+.form__checkbox {
+  font-size: 0.9em;
+  margin: 5px 0;
+  padding: 0 30px 0 0;
+}
+
+.form__checkbox input[type="checkbox"] {
   float: right;
   margin: 6px -26px 0 0;
 }
 
-.form .form__radio .form__radio__title {
+.form__checkbox:last-child {
+  margin-bottom: 0;
+}
+
+.form__radio {
+  padding: 0 30px 0 0;
+  margin-bottom: 20px;
+}
+
+.form__radio input[type="radio"] {
+  float: right;
+  margin: 6px -26px 0 0;
+}
+
+.form__radio__title {
   font-size: 1em;
   margin: 10px 0 5px 0;
 }
 
-.form .form__radio:last-child {
+.form__radio:last-child {
   margin-bottom: 0;
 }
 
-.form .form__data {
+.form__data {
   margin: 0;
   font-size: 0.9em;
 }
@@ -4102,12 +4102,12 @@ textarea {
   border-radius: 4px;
 }
 
-.segmented-control .segmented-control__option {
+.segmented-control__option {
   display: inline-block;
   float: right;
 }
 
-.segmented-control .segmented-control__option__button {
+.segmented-control__option__button {
   display: block;
   padding: 3px 8px;
   margin: 0;
@@ -4116,6 +4116,20 @@ textarea {
   position: relative;
   z-index: 10;
   cursor: pointer;
+}
+
+.segmented-control__option__input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.segmented-control__option__input:checked + .segmented-control__option__button {
+  background: #007fd0;
+  color: #fff;
+  margin: -1px;
+  padding: 3px 9px;
+  border: 1px solid #007fd0;
+  z-index: 15;
 }
 
 .segmented-control :first-child .segmented-control__option__button {
@@ -4127,30 +4141,17 @@ textarea {
   border-radius: 4px 0 0 4px;
 }
 
-.segmented-control .segmented-control__option__input {
-  position: absolute;
-  visibility: hidden;
-}
-
-.segmented-control .segmented-control__option__input:checked + .segmented-control__option__button {
-  background: #007fd0;
-  color: #fff;
-  margin: -1px;
-  border: 1px solid #007fd0;
-  z-index: 15;
-}
-
 .select-control {
   font-size: 0.8em;
 }
 
-.select-control .select-control__option {
+.select-control__option {
   display: block;
   margin: 0 0 5px 0;
   padding: 0;
 }
 
-.select-control .select-control__option__button {
+.select-control__option__button {
   display: block;
   padding: 3px 8px;
   margin: 5px 0 0 10px;
@@ -4159,20 +4160,20 @@ textarea {
   border-radius: 4px;
 }
 
-.select-control .select-control__option__button.icon:before {
+.select-control__option__button.icon:before {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.select-control .select-control__option__input {
+.select-control__option__input {
   position: absolute;
   visibility: hidden;
 }
 
-.select-control .select-control__option__input:checked + .select-control__option__button {
+.select-control__option__input:checked + .select-control__option__button {
   background: #ccc;
 }
 
-.select-control .select-control__option__input:checked + .select-control__option__button.icon:before {
+.select-control__option__input:checked + .select-control__option__button.icon:before {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -4190,8 +4191,15 @@ a.button {
   border-radius: 4px;
 }
 
-.button:hover,
-a.button:hover {
+.button:link, .button:visited,
+a.button:link,
+a.button:visited {
+  color: #fff;
+}
+
+.button:hover, .button:active,
+a.button:hover,
+a.button:active {
   background: #ff7500;
   border-color: #ff7500;
   text-decoration: none;
@@ -4205,8 +4213,15 @@ a.button.button--secondary {
   color: #007fd0;
 }
 
-.button.button--secondary:hover,
-a.button.button--secondary:hover {
+.button.button--secondary:link, .button.button--secondary:visited,
+a.button.button--secondary:link,
+a.button.button--secondary:visited {
+  color: #007fd0;
+}
+
+.button.button--secondary:hover, .button.button--secondary:active,
+a.button.button--secondary:hover,
+a.button.button--secondary:active {
   color: #ff7500;
 }
 
@@ -4920,13 +4935,13 @@ textarea {
   }
 }
 
-.menu-bar .menu-bar__links {
+.menu-bar__links {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.menu-bar .menu-bar__links__item__link {
+.menu-bar__item__link {
   display: block;
   margin-bottom: 10px;
   padding: 8px 0;
@@ -4940,7 +4955,7 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) {
-  .menu-bar .menu-bar__links__item__link {
+  .menu-bar__item__link {
     width: auto;
     background: none;
     border-right: 1px solid #dfdfdf;
@@ -4968,57 +4983,60 @@ textarea {
   }
 }
 
-.section-menu .section-menu__links {
+.section-menu__links {
   margin: 0 0 15px 0;
   padding: 0;
   list-style: none;
 }
 
-.section-menu .section-menu__links:after {
+.section-menu__links:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.section-menu .section-menu__links .section-menu__links__item {
+.section-menu__links__item {
   float: right;
   width: 48%;
   margin-bottom: 4px;
 }
 
-.section-menu .section-menu__links .section-menu__links__item:nth-child(odd) {
+.section-menu__links__item:nth-child(odd) {
   margin-left: 2%;
 }
 
-.section-menu .section-menu__links .section-menu__links__item:nth-child(even) {
+.section-menu__links__item:nth-child(even) {
   margin-right: 2%;
 }
 
-.section-menu .section-menu__links .section-menu__links__item .section-menu__links__item__link {
+.section-menu__links__item__link {
   background: #f7f7f7;
   display: block;
   padding: 2px 8px;
-  text-decoration: none;
   border-radius: 3px;
 }
 
-.section-menu .section-menu__links .section-menu__links__item .section-menu__links__item__link:hover {
+.section-menu__links__item__link:link, .section-menu__links__item__link:visited {
+  text-decoration: none;
+}
+
+.section-menu__links__item__link:hover, .section-menu__links__item__link:active {
   background-color: #ff7500;
   border-color: #ff7500;
   color: #fff;
 }
 
-.section-menu .section-menu__links .section-menu__links__item.section-menu__links__item--active .section-menu__links__item__link {
+.section-menu__links__item.section-menu__links__item--active .section-menu__links__item__link {
   background-color: #007fd0;
   border-color: #007fd0;
   color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
-  .section-menu .section-menu__links {
+  .section-menu__links {
     margin: 0;
   }
-  .section-menu .section-menu__links .section-menu__links__item, .section-menu .section-menu__links .section-menu__links__item:nth-child(odd), .section-menu .section-menu__links .section-menu__links__item:nth-child(even) {
+  .section-menu__links .section-menu__links__item, .section-menu__links .section-menu__links__item:nth-child(odd), .section-menu__links .section-menu__links__item:nth-child(even) {
     float: none;
     width: 100%;
     margin-right: 0;

@@ -1,56 +1,61 @@
 .block {
     margin-bottom: 30px;
 
-    .block__heading {
+    &__heading {
         font-size: 1.2em;
         border-bottom: 1px solid $border-1;
         padding: 8px;
         margin: side-values(0 0 5px 0);
-    }
 
-    .block__heading--linked {
-        border-bottom: 0;
-        padding: 0;
-
-        .block__heading--linked__link {
-            padding: 8px 12px;
-            border-bottom: 1px solid $border-1;
-            display: block;
-
-            .count {
-                float: $right;
-                font-size: 0.8em;
-                color: $alt-font-color-1;
-                font-weight: normal;
-            }
-        }
-    }
-
-    .block__heading--major {
-        background: $primary-color;
-        color: $invert-font-color;
-        border: 0;
-        padding: 8px 12px;
-        margin-bottom: 0;
-        border-radius: 4px;
-
-        &.block__heading--linked {
+        &--linked {
+            border-bottom: 0;
             padding: 0;
 
-            .block__heading--linked__link {
-                border: none;
-                color: $invert-font-color;
+            &__link {
+                padding: 8px 12px;
+                border-bottom: 1px solid $border-1;
+                display: block;
 
                 .count {
-                    @include white-transparency(0.7);
+                    float: $right;
+                    font-size: 0.8em;
+                    color: $alt-font-color-1;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        &--major {
+            background: $primary-color;
+            color: $invert-font-color;
+            border: 0;
+            padding: 8px 12px;
+            margin-bottom: 0;
+            border-radius: 4px;
+
+            &.block__heading--linked {
+                padding: 0;
+
+                .block__heading--linked__link {
+                    border: none;
+                    color: $invert-font-color;
+
+                    &:link,
+                    &:hover {
+                        color: $invert-font-color;
+                    }
+
+                    .count {
+                        @include white-transparency(0.7);
+                    }
                 }
             }
         }
     }
 
-    &.block--container {
+    &--container {
         border: 1px solid $border-1;
-        border-radius: 4px;    
+        border-radius: 4px;
 
         .sort-results {
             border-width: 0;
@@ -71,7 +76,7 @@
     clear: both;
     border-radius: corner-values(0 0 4px 4px);
 
-    .sort-results__title {
+    &__title {
         display: inline-block;
         margin: side-values(0 10px 0 0);
         padding: 0;
@@ -93,11 +98,11 @@
     border-top: 1px solid $border-1;
     border-bottom: 1px solid $border-1;
 
-    .page-tabs__item {
+    &__item {
         display: inline-block;
         margin: side-values(0 8px 0 0);
 
-        .page-tabs__item__link {
+        &__link {
             padding: 4px 8px;
             display: inline-block;
             background: $background-1;
@@ -110,7 +115,7 @@
                 color: $invert-font-color;
             }
         }
-        
+
         &.page-tabs__item--active {
 
             .page-tabs__item__link {
@@ -154,7 +159,7 @@ dl.stats {
     font-size: 0.9em;
     border-radius: 4px;
 
-    .alert__message {
+    &__message {
         margin: 0;
         padding: 0;
 
@@ -164,12 +169,12 @@ dl.stats {
         }
     }
 
-    &.alert--danger {
+    &--danger {
         background-color: $danger-color;
         color: $invert-font-color;
     }
 
-    &.alert--success {
+    &--success {
         background-color: $success-color;
         color: $invert-font-color;
     }
@@ -204,7 +209,7 @@ dl.stats {
         text-align: $right;
         margin: side-values(0 -5px 25px -5px);
     }
-    
+
     li {
         display: inline-block;
         margin: 0 5px;
@@ -232,7 +237,7 @@ dl.stats {
         &.disabled {
             display: none;
         }
-    }       
+    }
 
     @include bp-medium {
         float: $left;
@@ -242,7 +247,7 @@ dl.stats {
 }
 
 .page-controls {
-    
+
     @include bp-medium {
         @include clearfix();
         margin-top: -20px;

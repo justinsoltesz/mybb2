@@ -133,6 +133,7 @@ class ParseDateHelper
     public function postDateLink(
         string $url,
         $date = null,
+        string $class = 'post__date',
         string $showFormat = null,
         string $attributeFormat = null
     ) : string {
@@ -145,7 +146,7 @@ class ParseDateHelper
         }
         $attributeTime = $this->formatDate($date, true, $attributeFormat);
 
-        return "<a href=\"{$url}\" class=\"post__date\" title=\"{$attributeTime}\">{$showTime}</a>";
+        return "<a href=\"{$url}\" class=\"{$class}\" title=\"{$attributeTime}\">{$showTime}</a>";
     }
 
     /**

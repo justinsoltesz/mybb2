@@ -1,0 +1,15 @@
+.breadcrumb {
+    display: block;
+    font-size: 0.8em;
+    color: $alt-font-color-3;
+    padding: 0;
+    margin: side-values(0 0 10px 0);
+
+    .breadcrumb__link {
+        color: $alt-font-color-1;
+
+        &.icon:before {
+            margin: side-values(0 6px 0 12px);
+        }
+    }
+}

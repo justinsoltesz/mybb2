@@ -13,50 +13,56 @@
         margin-#{$left}: 110px;
     }
 
-    .post__meta {
+    &__meta {
         padding: side-values(4px 6px 12px 6px);
 
         @include bp-small {
             padding: side-values(4px 6px 8px 6px);
         }
+    }
 
-        .post__author {
-            font-size: 1em;
-            margin: 0;
+    &__author {
+        font-size: 1em;
+        margin: 0;
 
-            @include bp-small {
-                display: inline-block;
-            }
-        }
-
-        .post__date, .post__topic {
-            font-size: 0.8em;
-            color: $alt-font-color-1;
-
-            @include bp-small {
-                margin: side-values(0 0 0 10px);
-            }
-        }
-
-        .post__edit-log {
-            font-size: 0.7em;
-            margin-#{$left}: 4px;
-        }
-
-        .post__status {
-            margin-#{$left}: 16px;
-            font-size: 0.8em;
-            font-weight: bold;
-
-            &.icon:before {
-                color: $alt-font-color-1;
-                font-size: 14px;
-                margin-#{$right}: 3px;
-            }
+        @include bp-small {
+            display: inline-block;
         }
     }
 
-    .post__inline-mod {
+    &__date,
+    &__topic {
+        font-size: 0.8em;
+        color: $alt-font-color-1;
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-1;
+        }
+
+        @include bp-small {
+            margin: side-values(0 0 0 10px);
+        }
+    }
+
+    &__edit-log {
+        font-size: 0.7em;
+        margin-#{$left}: 4px;
+    }
+
+    &__status {
+        margin-#{$left}: 16px;
+        font-size: 0.8em;
+        font-weight: bold;
+
+        &.icon:before {
+            color: $alt-font-color-1;
+            font-size: 14px;
+            margin-#{$right}: 3px;
+        }
+    }
+
+    &__inline-mod {
         float: $right;
         margin: side-values(-20px 0 0 7px);
 
@@ -65,7 +71,7 @@
         }
     }
 
-    .post__toggle {
+    &__toggle {
         float: $right;
         font-size: 14px;
         margin: side-values(1px 1px 0 0);
@@ -83,7 +89,7 @@
         }
     }
 
-    .post__badge {
+    &__badge {
         display: none;
 
         @include bp-medium {
@@ -108,7 +114,7 @@
         }
     }
 
-    .post__body {
+    &__body {
         padding: side-values(0 6px 3px 6px);
 
         p {
@@ -144,29 +150,34 @@
         }
     }
 
-    .post__signature {
+    &__signature {
         border-top: 1px dotted $border-2;
         padding: side-values(6px 6px 0 6px);
         margin: side-values(12px 0 0 0);
         font-size: 0.8em;
     }
 
-    .post__controls {
+    &__controls {
         list-style: none;
         margin: 0;
         padding: 4px;
         text-align: $right;
 
-        .post__controls__item {
+        &__item {
             display: inline-block;
             font-size: 0.8em;
 
-            .post__controls__item__link {
+            &__link {
                 color: $alt-font-color-1;
                 padding: 0 5px;
                 background-color: transparent;
                 border: none;
-                font-size: 1em;
+                font-size: 1.1em;
+
+                &:link,
+                &:visited {
+                    color: $alt-font-color-1;
+                }
 
                 &:hover,
                 &:active {
@@ -206,7 +217,7 @@
         }
     }
 
-    .post__likes {
+    &__likes {
         font-size: 0.8em;
         padding: side-values(8px 8px 4px 8px);
         margin: side-values(8px 0 0 0);
@@ -222,22 +233,22 @@
         }
     }
 
-    &.post--highlight {
+    &--highlight {
         background-color: $status-highlight;
         border-color: $status-highlight-border;
     }
 
-    &.post--soft-deleted {
+    &--soft-deleted {
         background-color: $status-deleted;
         border-color: $status-deleted-border;
     }
 
-    &.post--pending-approval {
+    &--pending-approval {
         background-color: $status-pending;
         border-color: $status-pending-border;
     }
 
-    &.post--hidden {
+    &--hidden {
 
         @include bp-small {
 
@@ -251,12 +262,13 @@
             padding-bottom: 2px;
         }
 
-        .post__body, .post__controls {
+        .post__body,
+        .post__controls {
             display: none;
         }
     }
 
-    &.post--conversation {
+    &--conversation {
 
         @include bp-medium {
             margin-#{$left}: 80px;
@@ -268,7 +280,7 @@
         }
     }
 
-    &.post--reply {
+    &--reply {
 
         .full-reply {
             float: $right;
@@ -283,7 +295,7 @@
             padding: 0;
         }
 
-        &.post--quick-reply .post__foot {
+        &--quick-reply .post__foot {
             margin: 5px 0;
         }
     }
@@ -353,13 +365,13 @@
     width: 80%!important;
     margin-left: 0!important;
 
-    .view-quotes__quotes {
+    &__quotes {
         overflow: auto;
         padding: side-values(15px 15px 0 15px);
         margin: 0;
     }
 
-    .view-quotes__select-all {
+    &__select-all {
         bottom: 0;
         margin: 0;
         padding: 6px 0;

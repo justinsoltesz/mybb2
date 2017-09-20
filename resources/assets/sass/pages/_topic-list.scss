@@ -3,7 +3,7 @@
     .topic-list__sort-topics,
     .topic {
         display: flex;
-        
+
         .column {
             box-sizing: border-box;
             padding-#{$left}: 5px;
@@ -15,7 +15,7 @@
 
             &.sort-column {
                 width: 50%;
-                padding-#{$left}: 18px;    
+                padding-#{$left}: 18px;
             }
 
             @include bp-medium {
@@ -32,7 +32,7 @@
                 }
             }
 
-            .primary-column__topic-title {
+            &__topic-title {
                 @extend .column;
                 width: 100%;
 
@@ -41,7 +41,7 @@
                 }
             }
 
-            .primary-column__start-date {
+            &__start-date {
                 @extend .column;
                 display: none;
 
@@ -111,7 +111,7 @@
         border-radius: corner-values(4px 4px 0 0);
         align-items: center;
 
-        .topic-list__sort-topics__link {
+        &__link {
             float: $left;
             padding-top: 3px;
             padding-bottom: 3px;
@@ -137,7 +137,7 @@
 
         .primary-column {
 
-            .primary-column__start-date {
+            &__start-date {
                 text-align: $right;
             }
         }
@@ -155,12 +155,12 @@
         }
     }
 
-    .topic-list__container {
+    &__container {
         border-#{$left}: 1px solid $border-2;
         border-#{$right}: 1px solid $border-2;
     }
 
-    .topic-list__important-topics {
+    &__important-topics {
         border-bottom: 2px solid $border-1;
     }
 
@@ -187,22 +187,22 @@
             }
         }
 
-        .topic__title {
+        &__title {
             margin: 0;
             padding: 0;
             font-size: 1em;
             font-weight: normal;
 
-            &.topic__title--unread {
+            &--unread {
                 font-weight: bold;
             }
 
-            &.topic__title--moved {
+            &--moved {
                 color: $alt-font-color-2;
             }
         }
 
-        .topic__icons {
+        &__icons {
             float: $right;
             color: $alt-font-color-1;
             font-size: 14px;
@@ -217,78 +217,82 @@
             }
         }
 
-        .topic__first-post__title,
-        .topic__replies__title,
-        .topic__latest-post__title {
+        &__first-post__title,
+        &__replies__title,
+        &__latest-post__title {
             @include visually-hidden;
         }
 
-        .topic__post {
+        &__post {
             font-size: 0.8em;
             color: $alt-font-color-2;
             margin: 0;
             padding: 0;
             display: inline-block;
 
-            .post__author .profile-link {
-                color: $alt-font-color-1;
+            &__author .profile-link {
+
+                &:link,
+                &:visited {
+                    color: $alt-font-color-1;
+                }
 
                 &:after {
                     content: ",";
                 }
             }
 
-            a.post__date {
+            &__date {
                 color: $alt-font-color-2;
             }
-        }
 
-        .topic__post--first {
-            display: none;
+            &--first {
+                display: none;
 
-            @include bp-medium {
-                display: block;
-            }
-        }
-
-        .topic__latest-post {
-            padding-#{$left}: 70px;
-
-            @include bp-medium {
-                padding-#{$left}: 5px;
-            }
-        }
-
-        .topic__post--latest {
-            font-size: 0.8em;
-            color: $alt-font-color-2;
-            margin: 0;
-
-            @include bp-medium {
-                display: inline-block;
-
-                .post__author {
+                @include bp-medium {
                     display: block;
-                    font-size: 1.2em;
+                }
+            }
 
-                    .profile-link:after {
-                        content: "";
+            &--latest-post {
+                padding-#{$left}: 70px;
+
+                @include bp-medium {
+                    padding-#{$left}: 5px;
+                }
+            }
+
+            &--latest {
+                font-size: 0.8em;
+                color: $alt-font-color-2;
+                margin: 0;
+
+                @include bp-medium {
+                    display: inline-block;
+
+                    .topic__post__author {
+                        display: block;
+                        font-size: 1.2em;
+
+                        .profile-link:after {
+                            content: "";
+                        }
                     }
                 }
             }
         }
 
-        .topic__replies {
+        &__replies {
             text-align: center;
             color: $alt-font-color-1;
 
-            .topic__replies__count {
+            &__count {
                 padding: 0;
                 margin: 0;
             }
         }
 
-        .topic__forum {
+        &__forum {
             font-size: 0.8em;
             color: $alt-font-color-2;
             margin: 0;
@@ -315,38 +319,38 @@
                 top: 0;
                 #{$left}: 0;
                 margin: side-values(0 10px 0 0);
-                display: inline-block;    
+                display: inline-block;
             }
         }
 
-        &.topic--highlight {
+        &--highlight {
             background-color: $status-highlight;
             border-color: $status-highlight-border;
         }
 
-        &.topic--soft-deleted {
+        &--soft-deleted {
             background-color: $status-deleted;
             border-color: $status-deleted-border;
         }
 
-        &.topic--pending-approval {
+        &--pending-approval {
             background-color: $status-pending;
             border-color: $status-pending-border;
         }
     }
 
-    &.topic-list--compact {
+    &--compact {
 
         .topic {
             padding-#{$left}: 70px;
 
-            .topic__post--latest {
+            &__post--latest {
 
-                a, a.post__date {
+                a, a.topic__post__date {
                     color: $alt-font-color-1;
                 }
 
-                .post__author {
+                .topic__post__author {
                     display: inline;
                     font-size: 1em;
 
@@ -363,7 +367,7 @@
                 #{$left}: 12px;
             }
 
-            .topic__replies {
+            &__replies {
                 font-size: 0.8em;
                 color: $alt-font-color-2;
                 display: none;
