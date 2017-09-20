@@ -5276,7 +5276,11 @@ textarea {
   color: #999;
 }
 
-.search__submit:hover, .search__advanced:hover {
+.search__submit:link, .search__submit:visited, .search__advanced:link, .search__advanced:visited {
+  color: #999;
+}
+
+.search__submit:hover, .search__submit:active, .search__advanced:hover, .search__advanced:active {
   color: #666;
 }
 
