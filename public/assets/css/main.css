@@ -4951,7 +4951,7 @@ dl.stats dd {
   list-style: none;
 }
 
-.menu-bar__item__link {
+.menu-bar__links__item__link {
   display: block;
   margin-bottom: 10px;
   padding: 8px 0;
@@ -4965,7 +4965,7 @@ dl.stats dd {
 }
 
 @media only screen and (min-width: 768px) {
-  .menu-bar__item__link {
+  .menu-bar__links__item__link {
     width: auto;
     background: none;
     border-left: 1px solid #dfdfdf;
