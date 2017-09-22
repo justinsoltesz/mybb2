@@ -4071,7 +4071,7 @@ select[multiple="multiple"] {
 
 input.short {
   width: 50px;
-  font: 12px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 12px Roboto, Helvetica Neue, Helvetica, Arial;
 }
 
 input.small {
@@ -4492,12 +4492,12 @@ html, button, input, select, textarea {
 
 body {
   margin: 0;
-  font: 16px/26px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 16px/26px Roboto, Helvetica Neue, Helvetica, Arial;
   background: #fff;
 }
 
 input, select, textarea, button {
-  font: 16px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 16px Roboto, Helvetica Neue, Helvetica, Arial;
 }
 
 a:link,

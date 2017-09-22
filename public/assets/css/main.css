@@ -4071,7 +4071,7 @@ select[multiple="multiple"] {
 
 input.short {
   width: 50px;
-  font: 12px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 12px Roboto, Helvetica Neue, Helvetica, Arial;
 }
 
 input.small {
@@ -4856,44 +4856,34 @@ dl.stats dd {
 
 .header .board-name {
   float: left;
-  margin: 10px 2% 5px 0;
+  margin: 20px 2% 15px 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .header .board-name {
-    margin: 20px 2% 15px 0;
-  }
+.header .board-name svg {
+  height: 40px;
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+.header .board-name svg * {
+  fill: #999;
+}
+
+.header .board-name:hover svg *, .header .board-name:active svg * {
+  fill: #ff7500;
+}
+
+.header .board-name__name {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #222;
 }
 
 .header .board-name #logo {
-  background-image: url("../images/logo_mobile.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  width: 137px;
-  height: 40px;
+  text-decoration: none;
   display: block;
-}
-
-@media only screen and (min-width: 768px) {
-  .header .board-name #logo {
-    background-image: url("../images/logo2.png");
-    width: 188px;
-    height: 55px;
-  }
-}
-
-@media all and (-webkit-min-device-pixel-ratio: 2) {
-  .header .board-name #logo {
-    background-image: url("../images/logo_mobile@2x.png");
-    background-size: 137px 40px;
-  }
-}
-
-@media all and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
-  .header .board-name #logo {
-    background-image: url("../images/logo2@2x.png");
-    background-size: 188px 55px;
-  }
 }
 
 .footer__navigation {
@@ -5073,12 +5063,12 @@ html, button, input, select, textarea {
 
 body {
   margin: 0;
-  font: 16px/26px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 16px/26px Roboto, Helvetica Neue, Helvetica, Arial;
   background: #fff;
 }
 
 input, select, textarea, button {
-  font: 16px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 16px Roboto, Helvetica Neue, Helvetica, Arial;
 }
 
 a:link,
@@ -6502,7 +6492,7 @@ textarea {
   background: #444;
   color: #fff;
   border-radius: 4px;
-  font: 12px Open Sans, Helvetica Neue, Helvetica, Arial;
+  font: 12px Roboto, Helvetica Neue, Helvetica, Arial;
   padding: 6px 4px;
   position: absolute;
   z-index: 1001;

@@ -1,6 +1,11 @@
         <header class="header">
             <div class="wrapper">
-                <h1 class="board-name"><a href="{{ url_route('forum.index') }}" id="logo"><span class="visually-hidden">{{ setting('general.board_name', 'MyBB Community Forums') }}</span></a></h1>
+                <h1 class="board-name">
+                    <a href="{{ url_route('forum.index') }}" id="logo">
+                        {{ source('assets/images/logo-knockout.svg') }}
+                        <span class="board-name__name">{{ setting('general.board_name', 'MyBB Community Forums') }}</span>
+                    </a>
+                </h1>
             </div>
             <nav class="user-bar">
                 <div class="wrapper">
